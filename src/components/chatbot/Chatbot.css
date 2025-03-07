@@ -13,71 +13,166 @@
     z-index: 9999; 
 }
 
-  
-  .chat-header {
+
+.chat-header {
     font-size: 20px;
     font-weight: bold;
     text-align: right;
     border-bottom: 1px solid #ddd;
-  }
-  
-  .chat-messages {
+}
+
+
+.chat-messages {
     flex: 1;
     overflow-y: auto;
     padding: 10px;
-  }
-  
-  .message {
+}
+
+.message {
     padding: 8px 12px;
     border-radius: 6px;
     margin-bottom: 8px;
     max-width: 80%;
-  }
-  
-  .message.bot {
+}
+
+.message.bot {
     background-color: white;
     align-self: flex-start;
-  }
-  
-  .message.user {
+}
+
+.message.user {
     background-color: #d3d3d3;
     align-self: flex-end;
-  }
-  
-  .timestamp {
+}
+
+
+.timestamp {
     font-size: 15px;
     color: gray;
     text-align: right;
-  }
-  
-  .chat-input {
+}
+
+
+.chat-input {
     display: flex;
     align-items: center;
     padding: 10px;
     border-top: 1px solid #ddd;
-  }
-  
-  .chat-input input {
+}
+
+.chat-input input {
     flex: 1;
     border: none;
     padding: 8px;
     border-radius: 6px;
     outline: none;
-  }
-  
-  .send-icon {
+}
+
+
+.send-icon {
     width: 20px;
     margin-left: 8px;
     cursor: pointer;
-  }
-  
-  .chat-toggle {
+}
+
+
+.chat-toggle {
     text-align: center;
     padding: 5px;
-  }
-  
-  .chat-toggle img {
+}
+
+.chat-toggle img {
     width: 20px;
     cursor: pointer;
-  }
-  
+}
+
+
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .chat-window {
+        width: 250px;
+        bottom: 60px;
+        right: 15px;
+        padding: 8px;
+    }
+
+    .chat-header {
+        font-size: 18px;
+    }
+
+    .message {
+        font-size: 14px;
+    }
+
+    .timestamp {
+        font-size: 13px;
+    }
+
+    .chat-input input {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+/* Mobile Devices (Below 768px) */
+@media (max-width: 768px) {
+    .chat-window {
+        width: 220px;
+        bottom: 50px;
+        right: 10px;
+        padding: 6px;
+    }
+
+    .chat-header {
+        font-size: 16px;
+    }
+
+    .message {
+        font-size: 12px;
+    }
+
+    .timestamp {
+        font-size: 12px;
+    }
+
+    .chat-input input {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .send-icon {
+        width: 18px;
+    }
+}
+
+/* Small Phones (Below 480px) */
+@media (max-width: 480px) {
+    .chat-window {
+        width: 200px;
+        bottom: 40px;
+        right: 5px;
+        padding: 5px;
+    }
+
+    .chat-header {
+        font-size: 14px;
+    }
+
+    .message {
+        font-size: 11px;
+    }
+
+    .timestamp {
+        font-size: 10px;
+    }
+
+    .chat-input input {
+        font-size: 10px;
+        padding: 4px;
+    }
+
+    .send-icon {
+        width: 16px;
+    }
+}

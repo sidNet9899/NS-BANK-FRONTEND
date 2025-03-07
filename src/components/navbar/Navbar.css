@@ -1,6 +1,8 @@
+
 .navbar {
     position: absolute;
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 120px;
     top: 0;
     left: 0;
@@ -19,7 +21,7 @@
 }
 
 .logo-img {
-    width: 56px;  /* Adjust based on your logo */
+    width: 56px;
     height: 40px;
 }
 
@@ -31,6 +33,7 @@
     color: #3E3A37;
 }
 
+/* Navigation Links (Visible on Desktop) */
 .nav-links {
     display: flex;
     list-style: none;
@@ -47,9 +50,127 @@
     color: #2A2A2A;
 }
 
+.menu-icon {
+    display: none;
+}
+
+
 .login-icon {
-    width: 160px;  /* Adjust based on your login icon */
+    width: 160px;
     height: 60px;
     cursor: pointer;
 }
 
+
+
+/* Tablets (Below 1024px) */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 0 40px;
+    }
+
+    .bank-name-heading {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .login-icon {
+        width: 140px;
+        height: 50px;
+    }
+}
+
+/* Mobile Devices (Below 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        height: 80px;
+        padding: 0 20px;
+    }
+
+    .logo-img {
+        width: 40px;
+        height: 30px;
+    }
+
+    .bank-name-heading {
+        font-size: 20px;
+    }
+
+    /* Hide normal nav-links initially */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background: white;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.05);
+        justify-content: center; /* Center items */
+    }
+
+    /* When active, show as a row */
+    .nav-links.active {
+        display: flex;
+        flex-direction: row;  /* Display in a row */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links li {
+        margin: 5px;
+    }
+
+    /* Show Menu Icon Only on Mobile & Tablets */
+    .menu-icon {
+        display: block;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    .login-icon {
+        width: 120px;
+        height: 40px;
+    }
+}
+
+/* Small Phones (Below 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        height: 70px;
+        padding: 0 10px;
+    }
+
+    .logo-img {
+        width: 35px;
+        height: 25px;
+    }
+
+    .bank-name-heading {
+        font-size: 18px;
+    }
+
+    .login-icon {
+        width: 100px;
+        height: 35px;
+    }
+
+    .nav-links {
+        top: 70px;
+    }
+
+    .nav-links.active {
+        flex-wrap: wrap; /* Ensures it stays in a row but wraps if needed */
+        gap: 10px;
+        padding: 10px;
+    }
+}

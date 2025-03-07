@@ -1,3 +1,4 @@
+
 .second-section-container {
     position: relative; 
     left: 50%;
@@ -7,14 +8,13 @@
     justify-content: space-between;
     top: 90px;
     padding: 60px 40px;
-    width: 1280px;
+    max-width: 1280px;
+    width: 100%;
     height: 631.76px;
     background: #D9E3E2;
     border-radius: 40px;
     margin-bottom: 140px; 
 }
-
-
 
 .header {
     display: flex;
@@ -23,7 +23,6 @@
     gap: 40px;
     width: 50%; 
 }
-
 
 .label {
     display: flex;
@@ -36,14 +35,12 @@
     margin-left: 55px; 
 }
 
-
 .label-text {
     font-weight: 700;
     font-family: 'Poppins', sans-serif; 
     font-size: 22px;
     margin-left: 15px; 
 }
-
 
 .title {
     font-family: 'Poppins', sans-serif;
@@ -53,7 +50,6 @@
     text-align: center; 
     margin-left: 15px;
 }
-
 
 .see-all-button {
     margin-left: 55px; 
@@ -65,8 +61,6 @@
     cursor: pointer;
 }
 
-
-
 .content-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
@@ -74,12 +68,10 @@
     width: 50%;
 }
 
-
-
 .usp-box {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     font-family: 'Poppins', sans-serif; 
     padding: 20px;
     width: 240px;
@@ -89,7 +81,6 @@
     text-align: left;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 
 .icon-container {
     display: flex;
@@ -104,3 +95,112 @@
 }
 
 
+/* 📌 Tablets (Between 768px - 1024px) */
+@media (max-width: 1024px) {
+    .second-section-container {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 50px 30px;
+    }
+
+    .header {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .label {
+        margin-left: 0;
+    }
+
+    .title {
+        font-size: 36px;
+        margin-left: 0;
+    }
+
+    .see-all-button {
+        margin-left: 0;
+    }
+
+    .content-wrapper {
+        width: 100%;
+        grid-template-columns: 1fr; /* Reduce to 1 column */
+        gap: 24px;
+    }
+
+    .usp-box {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* 📌 Mobile Devices (Below 768px) */
+@media (max-width: 768px) {
+    .second-section-container {
+        padding: 20px ;
+        margin-top: 40px;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .label-text {
+        font-size: 18px;
+    }
+
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .usp-box {
+        width: 100%;
+        max-width: 280px;
+        padding: 15px;
+        height: auto;
+    }
+
+    .icon-container {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+/* 📌 Small Phones (Below 480px) */
+@media (max-width: 480px) {
+    .second-section-container {
+        padding: 30px 15px;
+     
+
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .label-text {
+        font-size: 16px;
+    }
+
+    .see-all-button img {
+        width: 100px;
+        height: 35px;
+        padding: 20px;
+    }
+
+    .usp-box {
+        max-width: 260px;
+        padding: 10px;
+    }
+
+    .icon-container {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+}
