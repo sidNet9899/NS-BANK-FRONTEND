@@ -167,6 +167,30 @@
     right: 15px;
 }
 
+/* Footer Fix for Larger Screens */
+@media (min-width: 1441px) {
+    .hero-container {
+        max-width: 1440px;
+        padding: 20px 70px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .hero-container {
+        max-width: 1800px;
+        padding: 20px 120px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .hero-container {
+        max-width: 2350px;
+        padding: 20px 150px;
+    }
+}
+
+
+
 /* Tablets (768px to 1024px) */
 @media (max-width: 1024px) {
     .hero-container {
@@ -216,6 +240,7 @@
 
     .chatbot-text {
         font-size: 18px;
+        margin-bottom: -20px;
     }
 }
 

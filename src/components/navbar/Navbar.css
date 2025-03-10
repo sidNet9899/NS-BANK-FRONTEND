@@ -61,6 +61,27 @@
     cursor: pointer;
 }
 
+/* Centering & Limiting Max Width for Big Screens */
+@media (min-width: 1441px) {
+    .navbar {
+        max-width: 1440px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .navbar {
+        max-width: 1800px;
+        padding: 0 120px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .navbar {
+        max-width: 2350px; /* Adjust for ultra-wide screens */
+        padding: 0 150px;
+    }
+}
+
 
 
 /* Tablets (Below 1024px) */
@@ -174,3 +195,9 @@
         padding: 10px;
     }
 }
+
+/* Hide scrollbar for all elements */
+::-webkit-scrollbar {
+    display: none; /* Hides scrollbar */
+}
+
